@@ -1,0 +1,3 @@
+rootProject.name='YaMin'
+include ':app'
+include ':app:yamin'
