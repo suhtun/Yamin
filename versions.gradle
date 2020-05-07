@@ -1,0 +1,48 @@
+ext.deps = [:]
+def versions = [:]
+versions.android_gradle_plugin = '3.6.2'
+versions.kotlin = "1.3.61"
+versions.lifecycle = "2.2.0"
+versions.appcompat = "1.2.0-alpha02"
+versions.exo = "2.11.3"
+versions.recyclerview = "1.0.0"
+ext.versions = versions
+
+def build_versions = [:]
+build_versions.min_sdk = 16
+build_versions.compile_sdk = 29
+build_versions.target_sdk = 29
+build_versions.build_tools = "29.0.3"
+ext.build_versions = build_versions
+
+def deps = [:]
+deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
+
+deps.app_compat = "androidx.appcompat:appcompat:$versions.appcompat"
+deps.recyclerview = "androidx.recyclerview:recyclerview:$versions.recyclerview"
+
+def kotlin = [:]
+kotlin.stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin"
+kotlin.plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
+deps.kotlin = kotlin
+
+def lifecycle = [:]
+lifecycle.extensions = "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle"
+deps.lifecycle = lifecycle
+
+def exo = [:]
+exo.player = "com.google.android.exoplayer:exoplayer:$versions.exo"
+exo.core = "com.google.android.exoplayer:exoplayer-core:$versions.exo"
+exo.dash = "com.google.android.exoplayer:exoplayer-dash:$versions.exo"
+exo.ui = "com.google.android.exoplayer:exoplayer-ui:$versions.exo"
+exo.okhttp = "com.google.android.exoplayer:extension-okhttp:$versions.exo"
+deps.exo = exo
+
+ext.deps = deps
+
+def addRepos(RepositoryHandler handler) {
+    handler.google()
+    handler.jcenter()
+    handler.maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+}
+ext.addRepos = this.&addRepos

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="scrubber_default_size">0dp</dimen>
+    <dimen name="bar_height">4dp</dimen>
+    <dimen name="padding_bottom">52dp</dimen>
+</resources>

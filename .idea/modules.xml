@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Yamin.iml" filepath="$PROJECT_DIR$/Yamin.iml" group="YaMin" />
+      <module fileurl="file://$PROJECT_DIR$/app/yamin/Yamin-app-yamin.iml" filepath="$PROJECT_DIR$/app/yamin/Yamin-app-yamin.iml" group="YaMin/app/yamin" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="YaMin/app" />
+      <module fileurl="file://$PROJECT_DIR$/app/yamin/app-yamin.iml" filepath="$PROJECT_DIR$/app/yamin/app-yamin.iml" group="YaMin/app/yamin" />
+      <module fileurl="file://$PROJECT_DIR$/player/player.iml" filepath="$PROJECT_DIR$/player/player.iml" group="YaMin/player" />
+      <module fileurl="file://$PROJECT_DIR$/app/yamin/yamin.iml" filepath="$PROJECT_DIR$/app/yamin/yamin.iml" group="YaMin/app/yamin" />
+    </modules>
+  </component>
+</project>

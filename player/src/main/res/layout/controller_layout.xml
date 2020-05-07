@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/padding_bottom"
+    android:orientation="vertical">
+    <com.google.android.exoplayer2.ui.DefaultTimeBar
+        android:id="@id/exo_progress"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        app:bar_height="@dimen/bar_height"
+        android:layout_alignParentBottom="true"
+        app:played_color="@color/played_color"
+        app:unplayed_color="@color/unplayed_color"
+        app:buffered_color="@color/unplayed_color"
+        app:scrubber_enabled_size="@dimen/scrubber_default_size"
+        app:scrubber_disabled_size="@dimen/scrubber_default_size"
+        app:scrubber_dragged_size="@dimen/scrubber_default_size" />
+</RelativeLayout>

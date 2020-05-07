@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
@@ -7,13 +7,13 @@ android {
     buildToolsVersion build_versions.build_tools
 
     defaultConfig {
-        applicationId "mm.sumyat.yamin"
         minSdkVersion build_versions.min_sdk
         targetSdkVersion build_versions.target_sdk
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
     }
 
     buildTypes {
@@ -23,9 +23,24 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }
 
 dependencies {
     implementation deps.kotlin.stdlib
     implementation deps.app_compat
+    implementation deps.lifecycle.extensions
+    implementation deps.recyclerview
+    implementation deps.exo.player
+    implementation deps.exo.core
+    implementation deps.exo.dash
+    implementation deps.exo.ui
+    implementation deps.exo.okhttp
 }
