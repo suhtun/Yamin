@@ -22,7 +22,7 @@ allprojects {
 
 // Step 2. Add the dependency to app level build.gradle
 dependencies {
-    implementation 'com.github.pankaj89:MasterExoPlayer:1.4.4'
+    implementation 'com.github.suhtun:Yamin:1.0.1'
 }
 
 ```
